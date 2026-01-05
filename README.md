@@ -126,7 +126,10 @@ Utilizes **function templates** for code reusability and type flexibility.
 ---
 
 ## 🧑‍💻 Author
-**Balakrishna T**  
-💼 [GitHub](https://github.com/T-Balakrishna) • 🌐 [Portfolio](https://balakrishnat.vercel.app) • ✉️ [Email](https://mail.google.com/mail/?view=cm&to=tbalakrishna2005@gmail.com)
+<strong>Balakrishna T</strong><br>
+💼 <a href="https://github.com/T-Balakrishna" target="_blank">GitHub</a> •
+🌐 <a href="https://balakrishnat.vercel.app" target="_blank">Portfolio</a> •
+✉️ <a href="https://mail.google.com/mail/?view=cm&to=tbalakrishna2005@gmail.com" target="_blank">Email</a>
+
 
 
