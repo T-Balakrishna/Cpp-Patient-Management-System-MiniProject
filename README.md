@@ -1,134 +1,87 @@
-# 🏥 Patient Management System — C++ (Console Application)
+# Patient Management System (C++ Console Application)
 
-A **console-based C++ application** designed to simplify and automate hospital operations such as patient data management, appointment scheduling, billing, and insurance validation.  
-This project aims to minimize manual errors, reduce paperwork, and enhance access to crucial healthcare information for both administrative and clinical staff.
+## Description
 
----
+A console-based C++ application designed to streamline hospital operations such as patient record management, appointment scheduling, billing, and insurance validation. The system reduces manual effort, minimizes errors, and improves accessibility of healthcare data for administrative and clinical use.
 
-## 🩺 Problem Statement
+## Problem Statement
 
-Healthcare facilities often struggle to handle large volumes of information such as patient details, medical history, appointments, and billing records.  
-Manual handling can lead to **errors, inefficiencies, and data loss**.  
+Healthcare facilities often manage large volumes of patient data, appointments, and billing records manually, leading to inefficiencies, errors, and data inconsistency. This project provides a structured, digital solution using object-oriented programming concepts to improve reliability and scalability.
 
-This **Patient Management System** provides a digital and efficient solution, improving accuracy, scalability, and accessibility while reducing the need for excessive manpower.
+## Objectives
 
----
+* Efficient storage and retrieval of patient records
+* Appointment scheduling with doctor availability checks
+* Billing generation and insurance eligibility validation
+* Practical implementation of object-oriented programming concepts in C++
 
-## 🎯 Objectives
+## Core Functionalities
 
-- 🧾 Store, track, and access **patient records** efficiently.  
-- 🩹 Enable **appointment scheduling** and check **doctor availability**.  
-- 💳 Keep track of all **payment and billing details**.  
-- 🧮 Validate **insurance eligibility** during patient checkout.  
-- ⚙️ Implement **object-oriented concepts** such as inheritance, polymorphism, file handling, templates, and exception handling.
+* Inpatient and outpatient patient registration
+* Patient detail management (personal and medical data)
+* Doctor specialization selection and slot allocation
+* File-based doctor and availability management
+* Billing calculation with insurance validation
 
----
+## Object-Oriented Concepts Used
 
-## 🧱 Core Functionalities
+### Inheritance
 
-1. Choose between **Outpatient** or **Inpatient** entry modes.  
-2. Enter and manage **patient details** (name, age, contact, BP, weight, etc.).  
-3. **Select doctor specialization** such as Cardiology, Neurology, Oncology, etc.  
-4. **Doctor names and slot availability** are fetched directly from files for each department.  
-5. **Schedule appointments** automatically based on department and availability.  
-6. Generate and process **billing and insurance validation**.
+* Patient (base class) extended by Inpatient and Outpatient classes
+* Billing (base class) extended by Insurance class
 
----
+### Polymorphism
 
-## 🧮 Object-Oriented Concepts Used
+* Runtime polymorphism implemented using function overriding
+* Dynamic display of patient details based on patient type
 
-### 🧬 Inheritance
+### File Handling
 
-- **Hierarchical Inheritance:**  
-  - `Patient` (Base Class) → `Inpatient`, `Outpatient` (Derived Classes)  
-  - Used to inherit and manage shared patient details like name, BP, weight, and contact information.
-  
-- **Single Inheritance:**  
-  - `Billing` (Base Class) → `Insurance` (Derived Class)  
-  - Used to calculate billing details, apply insurance validation, and deduct eligible amounts.
+Doctor and slot details are stored in department-specific files and loaded dynamically during appointment scheduling.
 
----
+Departments include Cardiology, Neurology, Nephrology, Oncology, Radiology, and General Medicine.
 
-### 🔁 Polymorphism
+### Exception Handling
 
-- **Runtime Polymorphism** implemented using **function overriding**.  
-- The `display()` function is defined in:
-  - `Patient` → Displays general patient info.  
-  - `Inpatient` → Displays details specific to admitted patients.  
-  - `Outpatient` → Displays outpatient details.  
+User-defined exceptions are implemented to validate inputs such as phone number, blood pressure, weight, and date formats using try-catch blocks.
 
-This enables dynamic handling of different patient objects at runtime.
+### Templates
 
----
+Function templates are used to improve code reusability and support generic input validation.
 
-### 📂 File Handling
+## Technologies Used
 
-Doctor information is stored and retrieved from six department-specific files, each containing:
-- Doctor Name  
-- Available Slots  
+* C++ (Object-Oriented Programming)
+* File Handling (ifstream, ofstream)
+* Exception Handling
+* Function Templates
 
-**Departments Included:**
-- 🫀 Cardiology  
-- 🧠 Neurology  
-- 🧬 Nephrology  
-- 🎗️ Oncology  
-- 🦴 Radiology  
-- 💊 General Medicine  
+## Program Flow
 
-These files are read dynamically when a department is selected to schedule appointments.
+1. Select inpatient or outpatient mode
+2. Enter patient details
+3. Choose doctor specialization
+4. Load doctor and slot availability from file
+5. Confirm appointment
+6. Generate billing and validate insurance
 
----
+## How to Run
 
-### ⚠️ Exception Handling
+1. Clone the repository:
 
-Implemented custom **user-defined exceptions** to validate critical inputs and prevent runtime errors.  
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+   ```
+2. Compile the program:
 
-Exceptions handled include:
-- Invalid **Phone Number** format  
-- Unreasonable **Weight** or **Blood Pressure** input  
-- Incorrect **Date format** or invalid date value  
+   ```bash
+   g++ main.cpp -o patient_management
+   ```
+3. Run the executable:
 
-C++ `try`, `catch`, and `throw` blocks are used to control and handle erroneous inputs gracefully.
-
----
-
-### 🧩 Templates
-
-Utilizes **function templates** for code reusability and type flexibility.  
-
-- Defined a template function `chkname<T>()` to handle different data types while validating or processing user input.
-- Demonstrates how **templates** eliminate redundancy and support generic programming in C++.
-
----
-
-## ⚙️ Technologies and Concepts Used
-
-| Concept / Tool | Description |
-|-----------------|--------------|
-| 🧾 **C++ (OOP)** | Core programming language with object-oriented design |
-| 🏗️ **Inheritance & Polymorphism** | Code reusability and runtime flexibility |
-| 📂 **File Handling** | Reading doctor details and managing slot availability |
-| ❗ **Exception Handling** | Safe input validation mechanisms |
-| ⚙️ **Function Templates** | Generic, reusable function definitions |
-| 💳 **Billing System** | Realistic healthcare billing simulation with insurance integration |
-
----
-
-## 🧠 Program Flow
-
-1. Choose **Inpatient** or **Outpatient**  
-2. Input **patient details**  
-3. Choose **doctor specialization**  
-4. Fetch available **doctor and slot** from department file  
-5. **Book appointment** and display confirmation  
-6. Generate **billing** and validate **insurance eligibility**  
-
----
-
-## 🧑‍💻 Author
-<strong>Balakrishna T</strong><br>
-💼 [GitHub](https://github.com/T-Balakrishna) • 🌐 [Portfolio](https://balakrishnat.vercel.app) • ✉️ [Email](https://mail.google.com/mail/?view=cm&to=tbalakrishna2005@gmail.com)
-
-
-
+   ```bash
+   ./patient_management
+   ```
+4. Ensure all department files are present in the same directory as the executable.
 
